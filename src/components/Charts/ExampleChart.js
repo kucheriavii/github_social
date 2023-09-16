@@ -8,18 +8,18 @@ charts(FusionCharts);
 
 const ChartComponent = ({data}) => {
   const dataSource = {
-    chart:{
-      //Set the chart caption
-      caption: "Countries With Most Oil Reserves [2017-18]",
-      //Set the chart subcaption
-      subCaption: "In MMbbl = One Million barrels",
-      //Set the x-axis name
-      xAxisName: "Country",
-      //Set the y-axis name
-      yAxisName: "Reserves (MMbbl)",
-      numberSuffix: "K",
-      //Set the theme for your chart
-      theme: "fusion"
+    "chart": {
+      "caption": "Walmart's net sales",
+      "subcaption": "[2006-2018]",
+      "xaxisname": "Fiscal year",
+      "yaxisname": "Net Sales (In USD)",
+      "showvalues": "0",
+      "yaxisminvalue": "300",
+      "forceyaxisvaluedecimals": "0",
+      "plottooltext": "<div>Year : <b>$label</b><hr> Net Sales : <b>$datavalue<b></div>",
+      "numberprefix": "$",
+      "numbersuffix": "B",
+      "theme": "fusion"
     },
     data
   }
