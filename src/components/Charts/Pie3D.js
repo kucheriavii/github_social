@@ -19,7 +19,7 @@ const ChartComponent = ({data}) => {
   return (
     <ReactFusioncharts
         type="pie3d"
-        width="400"
+        width="100%"
         height="400"
         dataFormat="JSON"
         dataSource={dataSource}
