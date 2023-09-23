@@ -5,8 +5,7 @@ import { GithubContext } from '../context/context';
 import { useContext } from 'react';
 const Search = () => {
   const [user, setUser] = useState('')
-  const {request} = useContext(GithubContext)
-  console.log(request)
+  const {request, error} = useContext(GithubContext)
   //gets things from global context
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,8 +14,13 @@ const Search = () => {
       //optioanal
     }
   }
+  
   return <section className='section'>
     <Wrapper className='section-center'>
+      {error.show &&
+      <ErrorWrapper>
+        <p>{error.msg}</p>  
+      </ErrorWrapper>}
       <form onSubmit={handleSubmit}>
         <div className='form-control'>
           <MdSearch />
