@@ -19,7 +19,7 @@ const Card = () => {
     <div className='links'>
       {company && <p><MdBusiness></MdBusiness> {company}</p>}
       {location && <p><MdLocationOn/>{location}</p>}
-      {blog && <a href={`https://${blog}`}><MdLink/>{blog}</a>}
+      {blog && <a href={`${blog}`}><MdLink/>{blog}</a>}
     </div>
   </Wrapper>;
 };
